@@ -1,0 +1,59 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+  <servlet>
+  	<servlet-name>search</servlet-name>
+  	<servlet-class>servlet.MysqlOutput</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>register</servlet-name>
+  	<servlet-class>servlet.MysqlInput</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>list</servlet-name>
+  	<servlet-class>servlet.MysqlListAll</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>edit</servlet-name>
+  	<servlet-class>servlet.MysqlEdit</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>delete</servlet-name>
+  	<servlet-class>servlet.MysqlDel</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>search</servlet-name>
+  	<url-pattern>/Search.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>register</servlet-name>
+  	<url-pattern>/Register.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>list</servlet-name>
+  	<url-pattern>/list.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>edit</servlet-name>
+  	<url-pattern>/edit.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>delete</servlet-name>
+  	<url-pattern>/delete.do</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+  	<welcome-file>search.html</welcome-file>
+  </welcome-file-list>
+</web-app> 
